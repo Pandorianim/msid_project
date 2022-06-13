@@ -33,13 +33,14 @@ def download_data():
                 for participant in characters:
                     if participant["puuid"] == me["puuid"]:
                         i += 1
-                        participant["gameDuration"] = match_detail["info"]["gameDuration"]
+                        participant["gameDuration"] = match_detail["info"][
+                            "gameDuration"
+                        ]
                         output.append(participant)
                         print(i)
             df = pd.DataFrame(output)
         except Exception:
             pass
-
         kills = df["kills"].values
         deaths = df["deaths"].values
         assists = df["assists"].values
@@ -77,8 +78,7 @@ def get_min_max_of_frame(frame):
     for col in frame:
         max_col[col] = frame[col].max()
         min_col[col] = frame[col].min()
-
-    result = pd.DataFrame([min_col, max_col], index=['min', 'max'])
+    result = pd.DataFrame([min_col, max_col], index=["min", "max"])
     return result
 
 
@@ -95,9 +95,9 @@ def filter_data(data, minDuration):
     data = data[data.duration >= minDuration]
     return data
 
+
 def chose_cut_point(data, start_index, end_index):
     result = []
-    data = data
     for i in range(start_index, end_index):
         learn = data[:i]
         test = data[i:]

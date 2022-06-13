@@ -61,8 +61,7 @@ if __name__ == "__main__":
         start=test["duration"].min(), stop=test["duration"].max(), num=len(test)
     )
     sns.scatterplot(x="index", y="gold", data=test)
-    sns.lineplot(x=listaIndex, y=listaPred, color="red", label='Pred')
-    sns.lineplot(x=listaIndex, y=listaTrue, color="orange", label="True")
+    sns.scatterplot(x=listaIndex, y=listaPred, color="red", label='Pred')
     plt.show()
     l_x_d, l_y_d, t_x_d, t_y_d = ut.get_x_and_y(learn, test, "damage")
 
