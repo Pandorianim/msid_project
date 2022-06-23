@@ -1,6 +1,3 @@
 # msid_project
-Projekt na laboratoria z msid
-
-Instrukcja odpalenia: Pobrać cały folder [projektMSID] (razem z plikiem .pkl), a następnie otworzyć go w pycharmie albo innym idle
-
-Raport w formie pdf w repezytorium, albo folder z plikami latexowymi.
+Project made for the course Metody Systemowe i Decyzyjne eng. (laboratory) at the Wrocław University of Science and Technology (Politechnika Wroclawska).
+Project uses MLR to try and predict data
